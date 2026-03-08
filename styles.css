@@ -56,6 +56,13 @@ h1 {
   margin-bottom: 28px;
 }
 
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
 .cta {
   display: inline-block;
   padding: 12px 24px;
@@ -70,6 +77,10 @@ h1 {
   background: var(--accent);
   color: #001221;
   box-shadow: 0 0 20px rgba(53, 211, 255, 0.45);
+}
+
+.cta-solid {
+  background: rgba(53, 211, 255, 0.12);
 }
 
 main {
