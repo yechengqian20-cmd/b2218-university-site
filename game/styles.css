@@ -1,0 +1,66 @@
+﻿:root {
+  --bg: #070b14;
+  --panel: #111a2b;
+  --line: #233a60;
+  --text: #dbe7ff;
+  --accent: #41d9ff;
+  --danger: #ff4d7a;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "Segoe UI", "Noto Sans SC", sans-serif;
+  background: radial-gradient(circle at 20% 10%, #1a2f52 0%, var(--bg) 40%), var(--bg);
+  color: var(--text);
+}
+.wrap {
+  max-width: 1024px;
+  margin: 18px auto;
+  padding: 12px;
+}
+header {
+  background: rgba(17,26,43,.75);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 12px;
+}
+h1 { margin: 0; font-size: 28px; color: var(--accent); }
+header p { margin: 6px 0 0; color: #93a9ce; }
+.hud {
+  margin-top: 8px;
+  display: flex;
+  gap: 18px;
+  font-size: 16px;
+}
+canvas {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #060a12;
+  display: block;
+}
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.65);
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: 16px;
+}
+.overlay h2 { margin: 0 0 8px; font-size: 40px; color: var(--danger); }
+.overlay p { margin: 0 0 16px; font-size: 18px; }
+.overlay button {
+  padding: 10px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+}
+.hidden { display: none; }
+@media (max-width: 700px) {
+  .hud { gap: 12px; font-size: 14px; flex-wrap: wrap; }
+  h1 { font-size: 22px; }
+}
